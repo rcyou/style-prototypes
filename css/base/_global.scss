@@ -1,0 +1,172 @@
+*,
+*:before,
+*:after { box-sizing: border-box; }
+
+html {
+	height: 100%;
+	font-size: 62.5%;
+}
+
+body {
+	height: 100%;
+	min-height: 100%;
+	font-size: 1.6rem;
+	font-family: $f_font;
+	line-height: 1.5;
+	color: $c_black;
+	background-color: $c_white;
+
+	/* smooths type in all browsers */
+	text-shadow: 1px 1px 1px rgba($c_black, 0.004);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img {
+	border: 0;
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: $c_link;
+
+	@include hover() {
+		color: $c_link_hover;
+	}
+}
+
+hr {
+	background: $c_grey;
+	float: left;
+	width: 100%;
+	margin: 1.5rem 0;
+}
+
+h1,
+h2,
+h3 {
+	font-family: $f_font;
+	font-weight: $f_bold;
+	padding: 0;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+	color: $c_black;
+	margin: 2rem 0 1rem 0;
+}
+
+sup,
+sub {font-size: 70%; }
+
+sup { vertical-align: super; }
+sub { vertical-align: sub; }
+
+b,
+strong {
+	font-weight: bold;
+	font-weight: 600;
+}
+
+i,
+em { font-style: italic; }
+
+.cf {
+	@include cf();
+}
+
+
+/* ==========================================================================
+ Page + Container
+ ========================================================================== */
+.page {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 2rem;
+	width: 100%;
+	max-width: $container;
+}
+
+
+/* ==========================================================================
+Link Buttons (links that look like buttons)
+========================================================================== */
+.link_button {
+	text-decoration: none;
+	display: inline-block;
+	padding: 1rem 2rem;
+	margin: 1.5rem 0;
+	line-height: 1.125;
+	font-family: $f_font;
+	background-color: $c_button;
+	border: 1px solid $c_button;
+	color: $c_white;
+	border-radius: 0.2rem;
+
+	@include hover {
+		background-color: $c_button_hover;
+		border-color: $c_button_hover;
+		color: $c_white;
+		outline: none;
+	}
+}
+
+/* ==========================================================================
+CSS for Embeded videos
+========================================================================== */
+.video { /* wrap your iframe in an element with class="video" */
+	width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 0px;
+    padding: 0px 0px 62.5% 0px;
+
+	iframe,
+	object,
+	embed {
+	    position: absolute;
+	    top: 0px;
+	    left: 0px;
+	    width: 100%;
+	    height: 100%;
+	}
+}
+
+/* ==========================================================================
+CMS Module Grid
+========================================================================== */
+.cms-section {
+	float: left;
+	width: 100%;
+}
+
+.cms-module { float: left; }
+.cms-module { padding: 1rem; }
+
+.cms-module-12,
+.cms-module-9,
+.cms-module-8,
+.cms-module-6,
+.cms-module-4,
+.cms-module-3 { width: 100%; }
+
+
+@media all and #{$m_desktop} {
+	// width = 100% / (12/X)
+	// 100% divided by remainder of 12 (total columns) divided [num of columns]
+
+	.cms-module-12 { width: 100% / (12/12); } // full
+	.cms-module-9 { width: 100% / (12/9); } // three-fourths
+	.cms-module-8 { width: 100% / (12/8); } // two-thirds
+	.cms-module-6 { width: 100% / (12/6); } // half
+	.cms-module-4 { width: 100% / (12/4); } // third
+	.cms-module-3 { width: 100% / (12/3); } // quarter
+
+}

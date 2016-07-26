@@ -1,0 +1,561 @@
+@charset "utf-8";
+.md {
+  font-family: 'Material Icons';
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "liga" 1;
+     -moz-font-feature-settings: "liga" 1;
+          font-feature-settings: "liga" 1;
+  font-style: normal;
+  text-transform: none;
+  line-height: 1;
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+abbr, address, article, aside, audio, b, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: 0 0;
+}
+
+body {
+  line-height: 1;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+  content: '';
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: 0 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  margin: 1rem 0;
+  padding: 0;
+  border: 0;
+}
+
+button, input, select, textarea {
+  margin: 0;
+  outline: 0 !important;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner, select::-moz-focus-inner, textarea::-moz-focus-inner {
+  border: 0;
+}
+
+button, input, select {
+  vertical-align: middle;
+}
+
+*[class*="full"],
+*[class*="half"],
+*[class*="third"],
+*[class*="quarter"],
+*[class*="two-thirds"],
+*[class*="three-fourths"] {
+  float: left;
+}
+
+*[class*="full"],
+*[class*="half"],
+*[class*="third"],
+*[class*="quarter"],
+*[class*="two-thirds"],
+*[class*="three-fourths"] {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 2%;
+}
+
+*[class*="full"],
+*[class*="last"] {
+  margin-bottom: 0;
+}
+
+/* Some conditional styles for ease of use */
+*[class*="block"] {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* for IE 8 support */
+/*
+*[class*="block"] { background-color: #AAA; }
+*[class*="block"] *[class*="block"] { background-color: #555; }
+*/
+*[class*="band"] {
+  background-color: #888;
+}
+
+section, *[class*="section"] {
+  overflow: hidden;
+  width: 100%;
+  float: left;
+  padding: 1% 0;
+  position: relative;
+}
+
+*[class*="holder"] {
+  padding: 2%;
+}
+
+/* ==========================================================================
+Screen size is greater than 400 pixels
+========================================================================== */
+@media all and (min-width: 400px) {
+  *[class*="full"],
+  *[class*="half"],
+  *[class*="third"],
+  *[class*="quarter"],
+  *[class*="two-thirds"],
+  *[class*="three-fourths"] {
+    margin-bottom: 0;
+  }
+
+  *[class*="half"],
+  *[class*="third"],
+  *[class*="quarter"],
+  *[class*="two-thirds"],
+  *[class*="three-fourths"] {
+    margin-left: 1%;
+    margin-right: 1%;
+  }
+
+  *[class*="first"] {
+    margin-left: 0;
+  }
+
+  *[class*="last"] {
+    margin-right: 0;
+  }
+
+  *[class*="middle"] {
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+
+  *[class*="full"] {
+    width: 100%;
+  }
+
+  *[class*="half"] {
+    width: 100%;
+  }
+
+  *[class*="third"] {
+    width: 32%;
+  }
+
+  *[class*="two-thirds"] {
+    width: 66%;
+  }
+
+  *[class*="quarter"] {
+    width: 23.5%;
+  }
+
+  *[class*="three-fourths"] {
+    width: 74.5%;
+  }
+}
+/* ==========================================================================
+Screen size is greater than 900 pixels
+========================================================================== */
+@media all and (min-width: 900px) {
+  *[class*="full"] {
+    width: 100%;
+  }
+
+  *[class*="half"] {
+    width: 49%;
+  }
+
+  *[class*="third"] {
+    width: 32%;
+  }
+
+  *[class*="two-thirds"] {
+    width: 66%;
+  }
+
+  *[class*="quarter"] {
+    width: 23.5%;
+  }
+
+  *[class*="three-fourths"] {
+    width: 74.5%;
+  }
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  height: 100%;
+  min-height: 100%;
+  font-size: 1.6rem;
+  font-family: "Helvetica Neue", sans-serif;
+  line-height: 1.5;
+  color: #000;
+  background-color: #fff;
+  /* smooths type in all browsers */
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  border: 0;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #00d;
+}
+a:hover, a:focus, a:active {
+  color: #d00;
+}
+
+hr {
+  background: #DDD;
+  float: left;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  padding: 0;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  color: #000;
+  margin: 2rem 0 1rem 0;
+}
+
+sup,
+sub {
+  font-size: 70%;
+}
+
+sup {
+  vertical-align: super;
+}
+
+sub {
+  vertical-align: sub;
+}
+
+b,
+strong {
+  font-weight: bold;
+  font-weight: 600;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+.cf {
+  *zoom: 1;
+}
+.cf:before, .cf:after {
+  content: ' ';
+  display: table;
+}
+.cf:after {
+  clear: both;
+}
+
+/* ==========================================================================
+ Page + Container
+ ========================================================================== */
+.page {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+/* ==========================================================================
+Link Buttons (links that look like buttons)
+========================================================================== */
+.link_button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin: 1.5rem 0;
+  line-height: 1.125;
+  font-family: "Helvetica Neue", sans-serif;
+  background-color: pink;
+  border: 1px solid pink;
+  color: #fff;
+  border-radius: 0.2rem;
+}
+.link_button:hover, .link_button:focus, .link_button:active {
+  background-color: yellowgreen;
+  border-color: yellowgreen;
+  color: #fff;
+  outline: none;
+}
+
+/* ==========================================================================
+CSS for Embeded videos
+========================================================================== */
+.video {
+  /* wrap your iframe in an element with class="video" */
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 0px;
+  padding: 0px 0px 62.5% 0px;
+}
+.video iframe,
+.video object,
+.video embed {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+/* ==========================================================================
+CMS Module Grid
+========================================================================== */
+.cms-section {
+  float: left;
+  width: 100%;
+}
+
+.cms-module {
+  float: left;
+}
+
+.cms-module {
+  padding: 1rem;
+}
+
+.cms-module-12,
+.cms-module-9,
+.cms-module-8,
+.cms-module-6,
+.cms-module-4,
+.cms-module-3 {
+  width: 100%;
+}
+
+@media all and (min-width: 800px) {
+  .cms-module-12 {
+    width: 100%;
+  }
+
+  .cms-module-9 {
+    width: 75%;
+  }
+
+  .cms-module-8 {
+    width: 66.66667%;
+  }
+
+  .cms-module-6 {
+    width: 50%;
+  }
+
+  .cms-module-4 {
+    width: 33.33333%;
+  }
+
+  .cms-module-3 {
+    width: 25%;
+  }
+}
+.form_buttons button,
+.form_buttons input[type="submit"],
+.form_buttons input[type="button"],
+.form_buttons input[type="reset"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  margin: 0 0 1.5rem 0;
+  padding: 1rem 2rem;
+  background-color: #DDD;
+  border: 1px solid #DDD;
+  border-radius: 0px;
+  font-size: 1.6rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.form_buttons button:hover, .form_buttons button:focus, .form_buttons button:active,
+.form_buttons input[type="submit"]:hover,
+.form_buttons input[type="submit"]:focus,
+.form_buttons input[type="submit"]:active,
+.form_buttons input[type="button"]:hover,
+.form_buttons input[type="button"]:focus,
+.form_buttons input[type="button"]:active,
+.form_buttons input[type="reset"]:hover,
+.form_buttons input[type="reset"]:focus,
+.form_buttons input[type="reset"]:active {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  background-color: #DDD;
+}
+header .logo {
+  margin: 0 auto;
+}
+
+main p {
+  margin: 1.6rem 0;
+}
+main ol, main ul {
+  list-style-position: outside;
+  padding-left: 3rem;
+  margin: 1.6rem 0;
+}
+main .style_section_subhead {
+  font-size: 2.4rem;
+  font-weight: 300;
+}
+main .annotation {
+  font-size: 1.4rem;
+  color: #DDD;
+  display: block;
+}
+
+.colors {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.colors h2 {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  width: 100%;
+}
+.colors div[class*="color_box"] {
+  width: 100%;
+  height: 6rem;
+  margin-bottom: 1.5rem;
+  background-color: #000;
+}
+
+.imagery {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.imagery .image_box {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.adjectives {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+.adjectives .adjective {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+}
+
+footer {
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: #DDD;
+}
+
+/*# sourceMappingURL=public.css.map */

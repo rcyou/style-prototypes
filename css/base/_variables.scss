@@ -1,0 +1,32 @@
+// Fonts
+$f_font: 'Helvetica Neue', sans-serif;
+$f_light: 300;
+$f_normal: 400;
+$f_bold: 700;
+
+// Colors
+$c_white: #fff;
+$c_black: #000;
+$c_grey: #DDD;
+$c_red: #c00;
+
+// Text Links
+$c_link: #00d;
+$c_link_hover: #d00;
+
+// Buttons
+$c_button: pink;
+$c_button_hover: yellowgreen;
+
+
+// Transition times
+$t_standard: .125s;
+
+// Container Class
+$container: 800px;
+
+// Media queries
+$m_container: "(min-width: " + ($container + 10px)")";
+$m_desktop: "(min-width: 800px)";
+$m_tablet: "(min-width: 500px) and (max-width: 799px)";
+$m_phone: "(max-width: 499px)";

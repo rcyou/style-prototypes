@@ -1,0 +1,93 @@
+*[class*="full"],
+*[class*="half"],
+*[class*="third"],
+*[class*="quarter"],
+*[class*="two-thirds"],
+*[class*="three-fourths"] { float: left; }
+
+*[class*="full"],
+*[class*="half"],
+*[class*="third"],
+*[class*="quarter"],
+*[class*="two-thirds"],
+*[class*="three-fourths"] {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 2%;
+}
+
+*[class*="full"],
+*[class*="last"] { margin-bottom: 0; }
+
+/* Some conditional styles for ease of use */
+
+*[class*="block"] { background-color: rgba(0,0,0,0.5); }
+
+/* for IE 8 support */
+/*
+*[class*="block"] { background-color: #AAA; }
+*[class*="block"] *[class*="block"] { background-color: #555; }
+*/
+
+*[class*="band"] { background-color: #888; }
+
+section, *[class*="section"] {
+	overflow: hidden;
+	width: 100%;
+	float: left;
+	padding: 1% 0;
+	position: relative;
+}
+
+*[class*="holder"] { padding: 2%; }
+
+
+/* ==========================================================================
+Screen size is greater than 400 pixels
+========================================================================== */
+@media all and (min-width: 400px) {
+	*[class*="full"],
+	*[class*="half"],
+	*[class*="third"],
+	*[class*="quarter"],
+	*[class*="two-thirds"],
+	*[class*="three-fourths"] { margin-bottom: 0; }
+
+	*[class*="half"],
+	*[class*="third"],
+	*[class*="quarter"],
+	*[class*="two-thirds"],
+	*[class*="three-fourths"] {
+		margin-left: 1%;
+		margin-right: 1%;
+	}
+
+	*[class*="first"] { margin-left: 0; }
+	*[class*="last"] { margin-right: 0; }
+
+	*[class*="middle"] {
+		margin-right: 1%;
+		margin-left: 1%;
+	}
+
+	*[class*="full"] { width: 100%; }
+	*[class*="half"] { width: 100%; }
+	*[class*="third"] { width: 32%; }
+	*[class*="two-thirds"] { width: 66%; }
+	*[class*="quarter"] { width: 23.5%; }
+	*[class*="three-fourths"] { width: 74.5%; }
+}
+
+/* ==========================================================================
+Screen size is greater than 900 pixels
+========================================================================== */
+@media all and (min-width: 900px) {
+
+	*[class*="full"] { width: 100%; }
+	*[class*="half"] { width: 49%; }
+	*[class*="third"] { width: 32%; }
+	*[class*="two-thirds"] { width: 66%; }
+	*[class*="quarter"] { width: 23.5%; }
+	*[class*="three-fourths"] { width: 74.5%; }
+}

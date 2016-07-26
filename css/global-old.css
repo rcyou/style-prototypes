@@ -1,0 +1,720 @@
+@charset "utf-8";
+/* ==========================================================================
+Global CSS - Visionary Site OnCall (visionary.com)
+========================================================================== */
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+	font-size: 62.5%;
+}
+
+body {
+	height: 100%;
+	min-height: 100%;
+	font-size: 1.6rem;
+	font-family: 'Lato', sans-serif;
+	line-height: 1.5;
+	color: #000;
+	background-color: #fafafa;
+
+	/* smooths type in all browsers */
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+	-webkit-font-smoothing: subpixel-antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* No #preview CSS from Build Shell global.css */
+
+img {
+	border: 0;
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a { /* insert CSS here */ }
+
+a:hover,
+a:focus { /* insert CSS here */ }
+
+
+h1, h2, h3 {
+	margin: 3.2rem 0 .8rem 0;
+	padding: 0;
+	line-height: 1.125;
+	font-weight: 900;
+}
+
+h1 { font-size: 4.4rem; }
+h2 { font-size: 3.6rem; }
+h3 { font-size: 2.4rem; }
+
+h4 { font-size: 2.1rem; }
+h5 { font-size: 1.8rem; }
+h6 { font-size: 1.6rem; }
+
+sup, sub { font-size: 70%; }
+sup { vertical-align: super; }
+sub { vertical-align: sub; }
+
+b, strong {
+	font-weight: bold;
+	font-weight: 700; /* or whatever your 'bold' weight is */
+}
+
+i, em { font-style: italic; }
+
+hr {
+	width: 100%;
+	height: 1px;
+	border: 0;
+	background-color: #DDD;
+	float: left;
+}
+
+header, main, footer {
+	float: left;
+	width: 100%;
+}
+
+/* ==========================================================================
+Error Styles
+========================================================================== */
+
+.error {
+	margin: 0 0 1.6rem 0;
+	padding-top: 0;
+	padding-left: 1.6rem;
+	font-weight: bold;
+	color: #c00;
+}
+
+/* ==========================================================================
+Clearfix
+========================================================================== */
+
+/*
+.cf:before, .cf:after {
+	content: ' ';
+	display: table;
+}
+.cf:after {
+	clear: both;
+}
+.cf {
+	*zoom: 1;
+}
+*/
+
+/* ==========================================================================
+ Category/Filter toggle viewer
+ ========================================================================== */
+.viewer_contain {
+	margin-bottom: 1.6rem;
+	border-bottom: 1px solid #DDD;
+}
+
+span.viewer,
+div.viewer,
+a.viewer {
+	display: block;
+	width: 100%;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	text-align: center;
+	border: 1px solid #000;
+	color: #000;
+	font-weight: normal;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+span.viewer:hover,
+span.viewer:focus,
+div.viewer:hover,
+div.viewer:focus,
+a.viewer:hover,
+a.viewer:focus,
+span.viewer.active,
+div.viewer.active,
+a.viewer.active {
+	background-color: #000;
+	color: #fff;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+/* ==========================================================================
+Sticky Footer -- If so desired
+========================================================================== */
+
+@media all and (min-width: 801px) {
+	.page {
+		min-height: 100%;
+		float: left;
+		position: relative;
+	}
+
+
+	main { padding-bottom: 60px; }
+
+	footer {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+}
+
+/* ==========================================================================
+Page and Container
+========================================================================== */
+.page {
+	width: 100%;
+	margin:0 auto;
+	padding: 0;
+}
+
+.container {
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0 2%;
+	max-width: 90%; /*set desired width*/
+}
+
+/* ==========================================================================
+Header (contains navigation, logo, etc)
+========================================================================== */
+header {
+	position: relative;
+	z-index: 30;
+	overflow: visible;
+	background-color: #DDD;
+	margin-bottom: 1%;
+	text-align: center;
+}
+
+
+header.section,
+header .container { overflow: visible; }
+
+header .logo {
+	position: relative;
+	width: auto;
+	margin-bottom: 2.4rem;
+}
+
+header .logo img {
+	display: block;
+	width: auto;
+	max-width: 100%;
+	max-height: 100%;
+	margin: 0 auto;
+}
+
+/* ==========================================================================
+Top Menu Navigation (drop-down menu)
+========================================================================== */
+nav { /* insert CSS here */ }
+
+.menu,
+.submenu {
+	cursor: pointer;
+	text-align: right;
+}
+
+.menu {
+	display: block;
+	width: 100%;
+}
+
+.submenu {
+	display: inline-block;
+	position: absolute;
+	top: 1rem; /* should be equal to .top_menu li a top-padding */
+	right: 1.6rem; /* should be equal to .top_menu li a side padding */
+}
+
+.top_menu {
+	display: none;
+	width: 100%;
+	list-style: none;
+	background-color: #BBB; /* slightly darker to see section. style as needed */
+
+	position: absolute;
+	left: 0;
+	margin: 0;
+}
+
+.top_menu li {
+	position: relative;
+	width: 100%;
+	border-bottom: 1px solid #000;
+}
+
+.top_menu li:last-child { border-bottom: none; }
+
+.top_menu li a {
+	width: 80%; /* decrease width to prevent link + target overlap */
+	display: block;
+	padding: 1rem 1.6rem;
+	text-decoration: none;
+	line-height: 1;
+}
+
+.top_menu ul.sub {
+	position: relative;
+	top: 0;
+	display: none;
+	overflow: hidden;
+	width: 100%;
+	margin-top: 0;
+}
+
+.top_menu ul.sub li {
+	width: 100%;
+	border-color: red;
+}
+
+.top_menu ul.sub li.sub-menu-first { border-top: 1px solid #e00; }
+
+.top_menu ul.sub li.sub-menu-last,
+.top_menu ul.sub li:last-child { border-bottom: none; }
+
+.top_menu ul.sub li a {
+	width: 100%;
+}
+
+/* No 'Top Search Form' CSS from Build Shell global.css */
+
+/* ==========================================================================
+Body / Contents
+========================================================================== */
+main { position: relative; }
+
+main section { /* insert CSS here */ }
+
+main aside { /* insert CSS here */ }
+
+main p { margin: 1.6rem 0; }
+
+main ol, main ul {
+	list-style-position: outside;
+	padding-left: 3rem;
+	margin: 1.6rem 0; /* prefer to have this the same as 'main p' but design my differ */
+}
+
+/* ==========================================================================
+Videos 
+========================================================================== */
+.video { /* wrap your iframe in an element with class="video" */
+	width: 100%;
+    position: relative;
+    overflow: hidden;
+    height: 0px;
+    padding: 30px 0px 62.5%;
+}
+
+.video iframe,
+.video object,
+.video embed {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ==========================================================================
+Arbitrary Styles for Wireframes -- ! Delete these when done !
+========================================================================== */
+.tile_info {
+	text-align: center;
+	margin: 0 0 2.4rem 0;
+}
+
+nav {
+	background-color: #999;
+	padding: 1rem 0;
+}
+
+/* Color Grid CSS */
+
+.color_box {
+	padding-top: 15%;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	background-color: #555;
+	margin-bottom: 2%;
+}
+
+.color_box.one { background-color: #e74c3c; }
+.color_box.two { background-color: #f1c40f; }
+.color_box.three { background-color: #3498db; }
+.color_box.four { background-color: #9b59b6; }
+.color_box.five { background-color: #27ae60; }
+.color_box.six { background-color: #34495e; }
+
+/*.color_box:before {
+	content: "#9b59b6";
+	display: inline-block;
+	color: #fff;
+}*/
+
+
+.adjective {
+	font-size: 2.4rem;
+	margin-bottom: 1rem;
+}
+
+.annotation {
+	font-size: 1.4rem;
+	color: #AAA;
+	display: block;
+	line-height: 1;
+}
+
+footer { text-align: center; }
+
+/* -- This is just so you can see the blocks on grid.html --*/
+.grid {
+	min-height: 5rem;
+	background-color: #AAA;
+}
+
+/* ==========================================================================
+Footer (Lower navigation, copyright, etc)
+========================================================================== */
+footer {
+	background-color: #DDD;
+	font-size: 1.2rem;
+	text-align: center;
+	margin-top: 1%;
+}
+
+footer .address,
+footer .legal { width: 100%; }
+
+footer .vsi {
+	display: block;
+	overflow: hidden;
+	margin: 1rem auto;
+	width: 120px;
+	height: 30px;
+	background: no-repeat url("https://static.visionary.com/siteoncall/siteoncall-footer.png");
+	text-indent: 100%;
+	white-space: nowrap;
+}
+
+/* ==========================================================================
+Form Styles
+========================================================================== */
+.form_row {
+	float: left;
+	width: 100%;
+}
+
+label.req {
+	font-weight: bold;
+	padding-right: .5rem;
+}
+
+label.req:after {
+	content: '*';
+	color: #c00;
+	margin-left: .25rem;
+	font-family: sans-serif;
+}
+
+fieldset,
+.form_buttons {
+	float: left;
+	width: 100%;
+}
+
+.fieldset { margin-bottom: 1.6rem; }
+
+fieldset.no_bottom,
+.form_buttons.no_bottom { margin-bottom: 0; }
+
+fieldset.fs1 { width: 25%; }
+fieldset.fs2 { width: 50%; }
+fieldset.fs3 { width: 75%; }
+
+fieldset input,
+fieldset select,
+fieldset textarea {
+	width: 100%;
+	height: 4.2rem;
+	margin: 0;
+	padding: .5rem;
+	border: 1px solid #DDD;
+	border-radius: 0px;
+	font-size: 1.6rem;
+	font-family: inherit;
+}
+
+fieldset label {
+	width: 100%;
+	display: block;
+	margin-bottom: .4rem;
+}
+
+fieldset select { padding: 0 1rem; }
+
+.form_buttons button,
+.form_buttons input[type="submit"],
+.form_buttons input[type="button"],
+.form_buttons input[type="reset"],
+fieldset input[type="text"],
+fieldset input[type="password"],
+fieldset input[type="email"],
+fieldset input[type="number"],
+fieldset input[type="tel"],
+fieldset input[type="url"],
+fieldset input[type="search"],
+fieldset textarea {
+	/* remove form element default browser appearance styles */
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+fieldset textarea { height: 10rem; }
+
+fieldset .form_note { font-size: 1.2rem; }
+
+input.chk { display: none; }
+
+/* Form Errors ------- */
+.form_error {
+	margin-bottom: 1.6rem;
+	color: #e00;
+}
+
+.form_error ul { padding-left: 1.6rem; }
+
+/* Button, Submit, and Cancel Form Buttons */
+.form_buttons button,
+.form_buttons input[type="button"],
+.form_buttons input[type="submit"],
+.form_buttons input[type="reset"] {
+	margin: 0 1rem 1rem 0;
+	padding: 1rem 2rem;
+	background-color: #DDD;
+	border: 1px solid #BBB;
+	border-radius: 0.3rem;
+	-moz-border-radius: 0.3rem;
+	-webkit-border-radius: 0.3rem;
+	font-size: 1.6rem;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+/* Hover & Focus Changes */
+.form_buttons button:hover,
+.form_buttons button:focus,
+.form_buttons button:active,
+.form_buttons input[type="button"]:hover,
+.form_buttons input[type="button"]:focus,
+.form_buttons input[type="button"]:active,
+.form_buttons input[type="submit"]:hover,
+.form_buttons input[type="submit"]:focus,
+.form_buttons input[type="submit"]:active,
+.form_buttons input[type="reset"]:hover,
+.form_buttons input[type="reset"]:focus,
+.form_buttons input[type="reset"]:active {
+	background-color: #AAA;
+	border-color: #888;
+}
+
+.form_buttons button:last-child,
+.form_buttons input[type="button"]:last-child,
+.form_buttons input[type="submit"]:last-child,
+.form_buttons input[type="reset"]:last-child {
+	margin-right: 0;
+}
+
+/* ==========================================================================
+Link Buttons (links that look like buttons)
+========================================================================== */
+.link_button {
+	text-decoration: none;
+	display: inline-block;
+	padding: 1rem 2rem;
+	background-color: #DDD;
+	border: 1px solid #BBB;
+	border-radius: 0.4rem;
+	-moz-border-radius: 0.4rem;
+	-webkit-border-radius: 0.4rem;
+}
+
+.link_button:hover,
+.link_button:focus,
+.link_button:active {
+	background-color: #AAA;
+	border-color: #888;
+}
+
+/* Ghost Buttons ----- */
+.ghost_button {
+	text-decoration: none;
+	display: inline-block;
+	padding: 1rem 2rem;
+	background-color: transparent;
+	border: 1px solid #333;
+	color: #333;
+	border-radius: 0.4rem;
+	-moz-border-radius: 0.4rem;
+	-webkit-border-radius: 0.4rem;
+}
+
+.ghost_button:hover,
+.ghost_button:focus,
+.ghost_button:active {
+	background-color: #333;
+	color: #fff; /* or whatever your site background color is */
+}
+
+
+
+
+/* ==========================================================================
+Screen greater than 1000 pixels
+========================================================================== */
+@media all and (min-width:1000px) {
+	/* placeholder for media query styling */
+}
+
+/* ==========================================================================
+Screen greater than 801 pixels -- this may change based on breakpoint of nav menu
+========================================================================== */
+@media all and (min-width:801px) {
+
+	header section,
+	header .section,
+	header .container { overflow: hidden; }
+
+	header .logo {
+		position: absolute;
+		top: 0;
+		left: 7%;
+		width: auto;
+	}
+
+	header .logo img {
+		display: block;
+		width: auto;
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	.tile_info {
+		text-align: right;
+		float: right;
+	}
+
+	.menu, .submenu {
+		display: none;
+	}
+	.top_menu {
+		display: block;
+		position: relative;
+		z-index: 200;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		background-color: transparent;
+		text-align: right;
+	}
+	.top_menu li {
+		position: relative;
+		display: inline-block;
+		width: auto;
+		border: none;
+	}
+	.top_menu li a {
+		display: inline-block;
+		padding: 0 2rem;
+		font-size: 1.6rem;
+		text-decoration: none;
+		width: auto;
+	}
+
+	.top_menu li:last-child a { padding-right: 0; }
+
+	/* nav .top_menu li.top_menu_active a */
+	.top_menu li a:hover,
+	.top_menu li a:focus { /* insert CSS here */ }
+
+
+	
+	header section,
+	header .section,
+	header .container { overflow: visible; }
+
+	main { padding-top: 6rem; }
+	
+
+	/* CSS show submenu */
+	.top_menu li:hover a ~ ul.sub,
+	.top_menu li:focus a ~ ul.sub,
+	.top_menu li a:focus ~ ul.sub { left: 0; }
+
+
+	.top_menu ul.sub {
+		display: block;
+		text-align: left;
+		position: absolute;
+		z-index: 500;
+		top: 2.25rem;
+		left: -99999px;
+		width: auto;
+		height: auto;
+		padding: 0 1rem;
+		list-style: none;
+		background-color: #999;
+	}
+
+	.top_menu ul.sub li {
+		width: 100%;
+		height: auto;
+	}
+
+	.top_menu ul.sub li a {
+		width: 100%;
+		height: auto;
+		white-space: nowrap;
+		padding: 0;
+		font-size: 1.6rem;
+	}
+
+	.top_menu ul.sub li a:hover,
+	.top_menu ul.sub li a:focus {
+		/* insert styling here */
+	}
+
+	/* -- Category/Filter toggle viewer -- */	
+
+ 	span.viewer,
+ 	div.viewer,
+ 	a.viewer,
+ 	.viewer:nth-child(odd),
+ 	.viewer:nth-child(even) {
+ 		float: none;
+ 		display: inline-block;
+ 		width: auto;
+ 		padding: 1rem 2rem;
+ 		margin-left: 0;
+ 		margin-right: 1rem;
+ 	}
+
+}

@@ -1,0 +1,27 @@
+.form_buttons {
+	button,
+	input[type="submit"],
+	input[type="button"],
+	input[type="reset"] {
+		// remove default appearance styles
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		
+		width: 100%;
+		margin: 0 0 1.5rem 0;
+		padding: 1rem 2rem;
+		background-color: $c_grey;
+		border: 1px solid $c_grey;
+		border-radius: 0px;
+		font-size: 1.6rem;
+		font-weight: $f_normal;
+		cursor: pointer;
+
+		@include hover {
+			background-color: $c_black;
+			border-color: $c_black;
+			color: $c_white;
+		}
+	}
+}
