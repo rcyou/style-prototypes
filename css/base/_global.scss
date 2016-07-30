@@ -39,24 +39,26 @@ a {
 
 hr {
 	background: $c_grey;
-	float: left;
 	width: 100%;
-	margin: 1.5rem 0;
-}
+	margin: 0;
 
-h1,
-h2,
-h3 {
-	font-family: $f_font;
-	font-weight: $f_bold;
-	padding: 0;
+
 }
 
 h1, h2, h3,
 h4, h5, h6 {
+	font-family: $f_font;
+	font-weight: $f_bold;
 	color: $c_black;
-	margin: 2rem 0 1rem 0;
+	width: 100%;
 }
+
+h1, h2, h3 {
+	line-height: 1.125;
+	margin: 3rem 0 0 0;
+}
+
+h4, h5, h6 { margin: 2rem 0 1rem 0; }
 
 sup,
 sub {font-size: 70%; }

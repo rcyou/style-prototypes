@@ -9,6 +9,12 @@ $c_white: #fff;
 $c_black: #000;
 $c_grey: #DDD;
 $c_red: #c00;
+$c_turbo: #FAC51C;
+$c_chateau: #41A85F;
+$c_mariner: #2C82C9;
+$c_whisteria: #9365B8;
+$c_cinnabar: #E25041;
+$c_almond: #A38F84;
 
 // Text Links
 $c_link: #00d;
@@ -23,10 +29,10 @@ $c_button_hover: yellowgreen;
 $t_standard: .125s;
 
 // Container Class
-$container: 800px;
+$container: 1200px;
 
 // Media queries
 $m_container: "(min-width: " + ($container + 10px)")";
-$m_desktop: "(min-width: 800px)";
-$m_tablet: "(min-width: 500px) and (max-width: 799px)";
-$m_phone: "(max-width: 499px)";
+$m_desktop: "(min-width: 900px)";
+$m_tablet: "(min-width: 500px)";
+$m_phone: "(min-width: 100px)";

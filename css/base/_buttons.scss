@@ -1,27 +1,59 @@
 .form_buttons {
+
 	button,
 	input[type="submit"],
-	input[type="button"],
-	input[type="reset"] {
+	input[type="reset"],
+	input[type="button"] {
 		// remove default appearance styles
 		-webkit-appearance: none;
 		-moz-appearance: none;
 		appearance: none;
 		
+		cursor: pointer;
 		width: 100%;
 		margin: 0 0 1.5rem 0;
 		padding: 1rem 2rem;
-		background-color: $c_grey;
-		border: 1px solid $c_grey;
-		border-radius: 0px;
-		font-size: 1.6rem;
+		border-radius: 2px;
+		border-width: 2px;
+		border-style: solid;
+		background-color: transparent;
+		font-size: 1.8rem;
 		font-weight: $f_normal;
-		cursor: pointer;
+
+		@media all and #{$m_tablet} {
+			width: auto;
+			margin-right: 1.5rem;
+		}
+	}
+
+	input[type="submit"] {
+		border-color: $c_chateau;
+		color: $c_chateau;
 
 		@include hover {
-			background-color: $c_black;
-			border-color: $c_black;
+			background-color: $c_chateau;
 			color: $c_white;
 		}
 	}
+
+	input[type="reset"] {
+		border-color: $c_cinnabar;
+		color: $c_cinnabar;
+
+		@include hover {
+			background-color: $c_cinnabar;
+			color: $c_white;
+		}
+	}
+
+	input[type="button"] {
+		border-color: $c_almond;
+		color: $c_almond;
+
+		@include hover {
+			background-color: $c_almond;
+			color: $c_white;
+		}
+	}
+
 }
